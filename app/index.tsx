@@ -2,18 +2,27 @@ import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.mainText}>Hello World!</Text>
-    </View>
+    <>
+      <View style={styles.container}>
+        <Text style={styles.mainText}>Hello World!</Text>
+      </View>
+      <View style={styles.container2}></View>
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.5,
+    flex: 1,
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "red",
+  },
+  container2: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "blue",
   },
   mainText: {
     fontSize: 20,
