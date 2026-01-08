@@ -1,22 +1,20 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 
 export default function Index() {
   return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <View style={styles.container}>
       <Text style={styles.mainText}>Hello World!</Text>
-      <StatusBar hidden={false} style="dark" />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 0.5,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "red",
+  },
   mainText: {
     fontSize: 20,
     fontWeight: "bold",
