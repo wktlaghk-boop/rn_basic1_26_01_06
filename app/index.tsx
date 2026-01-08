@@ -1,9 +1,9 @@
-import { Image, StyleSheet, Text, TextInput, View } from "react-native";
+import { Image, ScrollView, StyleSheet, Text, TextInput } from "react-native";
 
 export default function Index() {
   return (
     <>
-      <View style={styles.container}>
+      <ScrollView style={styles.scrollView}>
         <Text style={styles.mainText}>Hello World!</Text>
         {/* <Image source={require("../assets/images/logo.png")} /> 경로이미지 */}
         <Image
@@ -16,12 +16,24 @@ export default function Index() {
           placeholder="이름을 입력해주세요."
           placeholderTextColor="#000"
         />
-      </View>
+        <Text style={styles.text}>
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+          안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.안녕하세요.
+        </Text>
+      </ScrollView>
     </>
   );
 }
 
 const styles = StyleSheet.create({
+  scrollView: {
+    marginHorizontal: 20,
+  },
   container: {
     flex: 1,
     justifyContent: "center",
@@ -44,5 +56,12 @@ const styles = StyleSheet.create({
     padding: 10,
     margin: 10,
     borderRadius: 10,
+  },
+  text: {
+    fontSize: 50,
+    fontWeight: "bold",
+    borderWidth: 1,
+    borderColor: "red",
+    padding: 10,
   },
 });
