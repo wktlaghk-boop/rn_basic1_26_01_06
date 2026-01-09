@@ -3,21 +3,21 @@ import { StyleSheet, Text, View } from "react-native";
 export default function Index() {
   return (
     <>
-      <View style={[styles.container]}>
-        <View style={styles.header}>
-          <View style={styles.headerTop}>
-            <Text style={styles.cityName}>Ansan</Text>
-          </View>
-          <View style={styles.headerBottom}>
+      <View style={styles.container}>
+        <View style={styles.cityWrap}>
+          <Text style={styles.cityName}>Ansan</Text>
+        </View>
+        <View style={styles.mainWrap}>
+          <View style={styles.header}>
             <Text style={styles.regDate}>일요일, 2025-01-08</Text>
             <Text style={styles.weather}>맑음</Text>
           </View>
+          <View style={styles.body}>
+            <Text style={styles.temperature}>-7</Text>
+            <Text style={styles.temperatureUnit}>°</Text>
+          </View>
+          <View style={styles.footer}></View>
         </View>
-        <View style={styles.mainWrap}>
-          <Text style={styles.temperature}>0</Text>
-          <Text style={styles.temperatureUnit}>°</Text>
-        </View>
-        <View style={styles.footer}></View>
       </View>
     </>
   );
@@ -28,23 +28,27 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fee142",
   },
-  header: {
+  cityWrap: {
     flex: 1,
-    backgroundColor: "#fee142",
-    borderWidth: 3,
-    borderColor: "red",
-  },
-  headerTop: {
-    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
   },
   cityName: {
     fontSize: 40,
     fontWeight: "bold",
-    textAlign: "center",
-    padding: 10,
   },
-  headerBottom: {
-    flex: 4,
+  mainWrap: {
+    flex: 15,
+    //backgroundColor: "#fee142",
+    borderWidth: 3,
+    borderColor: "blue",
+    position: "relative",
+  },
+  header: {
+    flex: 1,
+    //backgroundColor: "#fee142",
+    //borderWidth: 3,
+    borderColor: "red",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -54,7 +58,7 @@ const styles = StyleSheet.create({
     color: "#fee142",
     backgroundColor: "#000",
     borderRadius: 50,
-    padding: 10,
+    //padding: 10,
     paddingBlockStart: 5,
     paddingBlockEnd: 10,
     paddingInlineStart: 10,
@@ -65,19 +69,19 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     marginBlockStart: 10,
   },
-  mainWrap: {
-    flex: 2,
-    backgroundColor: "#fee142",
+  body: {
+    flex: 4,
+    alignItems: "center",
+    justifyContent: "center",
     borderWidth: 3,
-    borderColor: "blue",
-    position: "relative",
+    borderColor: "green",
   },
   temperature: {
     fontSize: 200,
     fontWeight: "bold",
     position: "absolute",
     top: 68,
-    left: 80,
+    left: 70,
   },
   temperatureUnit: {
     fontSize: 180,
